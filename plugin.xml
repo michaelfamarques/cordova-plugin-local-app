@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-local-app"
+        version="1.0.0">
+    <name>LocalApp</name>
+    <description>Cordova Local App Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,locallapp</keywords>
+    <repo>https://github.com/michaelfamarques/cordova-plugin-local-app.git</repo>
+    <issue>https://github.com/michaelfamarques/cordova-plugin-local-app/issues</issue>
+    
+    <js-module src="www/localApp.js" name="LocalApp">
+        <clobbers target="LocalApp" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LocalApp">
+                <param name="android-package" value="br.com.regex.localapp.LocalApp"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/LocalApp.java" target-dir="src/br/com/regex/localapp" />
+    </platform>
+
+</plugin>
