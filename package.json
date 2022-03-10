@@ -2,7 +2,8 @@
     "name": "cordova-plugin-local-app",
     "version": "6.0.0",
     "description": "Cordova Local App Plugin",
-    "types": "./types/index.d.ts",
+    "types": "./www/index.d.ts",
+    "main": "./www/index.js",
     "cordova": {
         "id": "cordova-plugin-local-app",
         "platforms": [
@@ -21,12 +22,23 @@
     ],
     "scripts": {
         "test": "npm run lint",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "build": "tsc --build",
+        "clean": "tsc --build --clean"
     },
     "author": "Michael Fagundes Marques",
     "license": "Apache-2.0",
     "devDependencies": {
-        "@cordova/eslint-config": "^3.0.0"
+        "@cordova/eslint-config": "^3.0.0",
+        "@types/cordova": "^0.0.34",
+        "@types/cordova-plugin-file": "^4.3.2",
+        "@types/filesystem": "^0.0.32",
+        "@types/semver": "^7.3.9",
+        "cordova-zip-plugin": "^2.0.0",
+        "typescript": "^4.6.2"
     },
-    "homepage": "https://github.com/michaelfamarques/cordova-plugin-local-app#readme"
+    "homepage": "https://github.com/michaelfamarques/cordova-plugin-local-app#readme",
+    "dependencies": {
+        "semver": "^7.3.5"
+    }
 }
