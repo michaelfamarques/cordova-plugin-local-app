@@ -9,7 +9,7 @@
     <repo>https://github.com/michaelfamarques/cordova-plugin-local-app.git</repo>
     <issue>https://github.com/michaelfamarques/cordova-plugin-local-app/issues</issue>
     
-    <js-module src="www/localApp.js" name="LocalApp">
+    <js-module src="www/index.js" name="LocalApp">
         <clobbers target="LocalApp" />
     </js-module>
 
